@@ -1,0 +1,165 @@
+/* Main container for dashboard layout */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    background: #f4f6f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 220px;
+    background: #1e2a38;
+    color: #fff;
+    padding: 20px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.sidebar h2 {
+    color: #00bfff;
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.2s ease;
+}
+
+.sidebar ul li a:hover {
+    color: #00bfff;
+}
+
+/* Main content next to sidebar */
+.dashboard-content {
+    margin-left: 220px;
+    padding: 40px;
+    flex-grow: 1;
+    background: url('../images/clean-study-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+/* Welcome section */
+.welcome-msg h2 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.welcome-msg p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #00ff99;
+}
+
+/* Buttons */
+.btn {
+    background: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-right: 10px;
+    display: inline-block;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+.btn-danger {
+    background: #e74c3c;
+}
+
+.btn-danger:hover {
+    background: #c0392b;
+}
+
+/* Study plan section */
+.plans-section {
+    margin-top: 30px;
+}
+
+.plans-section h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* Plan card layout */
+.plans-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.plan-card {
+    background: #fff;
+    color: #333;
+    border-radius: 8px;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.plan-card h4 {
+    margin-top: 0;
+    color: #007bff;
+}
+
+.plan-actions {
+    margin-top: 15px;
+}
+
+.plan-actions .btn {
+    margin-right: 8px;
+}
+
+/* Responsive fix for mobile */
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: relative;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px;
+    }
+
+    .dashboard-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .plans-list {
+        justify-content: center;
+    }
+
+    .plan-card {
+        width: 100%;
+        max-width: 400px;
+    }
+}

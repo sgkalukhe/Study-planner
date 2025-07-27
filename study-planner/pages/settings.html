@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Settings | Study Planner</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">📘 Study Planner</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="profile.html">Profile</a>
+      <a href="logout.html">Logout</a>
+    </nav>
+  </header>
+
+  <section class="page-section" style="background: url('images/clean-study-bg.jpg') center/cover no-repeat;">
+    <div class="overlay">
+      <div class="container">
+        <h2>Settings</h2>
+        <form class="settings-form">
+          <label for="username">Username</label>
+          <input type="text" id="username" value="John Doe"/>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" value="johndoe@example.com"/>
+
+          <label for="goal">Study Goal</label>
+          <input type="text" id="goal" value="Prepare for final semester exams"/>
+
+          <label for="password">Change Password</label>
+          <input type="password" id="password" placeholder="New password"/>
+
+          <button type="submit" class="btn primary-btn">Save Changes</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Study Planner. All rights reserved.</p>
+  </footer>
+</body>
+</html>

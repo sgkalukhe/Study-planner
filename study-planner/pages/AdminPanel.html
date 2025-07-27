@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel | Study Planner</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-image: url('images/bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .navbar {
+      background-color: rgba(255, 255, 255, 0.95);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #1d3557;
+    }
+
+    .navbar nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #1d3557;
+      font-weight: 500;
+    }
+
+    .admin-section {
+      max-width: 900px;
+      margin: 80px auto;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .admin-section h2 {
+      color: #1d3557;
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .admin-card {
+      background: #f1f1f1;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 12px;
+      text-align: left;
+    }
+
+    .admin-card h3 {
+      margin-bottom: 8px;
+      color: #2a2a2a;
+    }
+
+    .admin-card p {
+      color: #555;
+      margin-bottom: 12px;
+    }
+
+    .admin-card button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .admin-card button:hover {
+      background-color: #0056b3;
+    }
+
+    .footer {
+      background: rgba(255, 255, 255, 0.9);
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">📘 Study Planner – <strong>Admin</strong></div>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="settings.html">Settings</a>
+      <a href="index.html">Logout</a>
+    </nav>
+  </header>
+
+  <section class="admin-section">
+    <h2>Admin Control Panel</h2>
+
+    <div class="admin-card">
+      <h3>Manage Users</h3>
+      <p>View and control user accounts.</p>
+      <button onclick="location.href='manage-users.html'">Go</button>
+    </div>
+
+    <div class="admin-card">
+      <h3>Analytics</h3>
+      <p>View platform usage and statistics.</p>
+      <button onclick="location.href='analytics.html'">Go</button>
+    </div>
+
+    <div class="admin-card">
+      <h3>Subjects</h3>
+      <p>Add or remove subjects from the database.</p>
+      <button onclick="location.href='manage-subjects.html'">Go</button>
+    </div>
+
+    <div class="admin-card">
+      <h3>Plans</h3>
+      <p>Review or update global study plans.</p>
+      <button onclick="location.href='manage-plans.html'">Go</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Study Planner Admin. All rights reserved.</p>
+  </footer>
+</body>
+</html>

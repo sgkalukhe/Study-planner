@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subject Preferences - Study Planner</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-image: url('images/clean-study-bg.jpg'); /* Replace with your image path */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #333;
+      min-height: 100vh;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #2c3e50;
+    }
+
+    .logo::before {
+      content: "📘";
+      margin-right: 10px;
+    }
+
+    .nav-links a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #007bff;
+    }
+
+    /* Form Card */
+    .form-container {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 2rem 2.5rem;
+      border-radius: 16px;
+      max-width: 600px;
+      margin: 4rem auto;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .form-container h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-container p {
+      margin-bottom: 2rem;
+      color: #555;
+    }
+
+    .form-group {
+      text-align: left;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 0.7rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      transition: border 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+
+    .submit-btn {
+      margin-top: 1rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="navbar">
+    <div class="logo">Study Planner</div>
+    <nav class="nav-links">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="daily_plan.html">Daily Plan</a>
+      <a href="weekly_plan.html">Weekly Plan</a>
+      <a href="subject_preferences.html">Subject Preferences</a>
+      <a href="logout.php">Logout</a>
+    </nav>
+  </header>
+
+  <!-- Subject Preferences Form -->
+  <div class="form-container">
+    <h2>🎯 Subject Preferences</h2>
+    <p>Tell us how challenging each subject is for you.</p>
+
+    <form action="save_subject_preferences.php" method="POST">
+      <div class="form-group">
+        <label for="subject">Subject Name</label>
+        <input type="text" id="subject" name="subject" placeholder="Enter Subject Name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="difficulty">Difficulty Level</label>
+        <select id="difficulty" name="difficulty" required>
+          <option value="">Select Difficulty</option>
+          <option value="Easy">Easy</option>
+          <option value="Medium">Medium</option>
+          <option value="Hard">Hard</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="hours">Weekly Study Hours</label>
+        <input type="number" id="hours" name="hours" placeholder="e.g., 5" min="0" required />
+      </div>
+
+      <div class="form-group">
+        <label for="interest">Interest Level</label>
+        <select id="interest" name="interest" required>
+          <option value="">Select Interest</option>
+          <option value="Low">Low</option>
+          <option value="Moderate">Moderate</option>
+          <option value="High">High</option>
+        </select>
+      </div>
+
+      <button type="submit" class="submit-btn">Save Preferences</button>
+    </form>
+  </div>
+
+</body>
+</html>

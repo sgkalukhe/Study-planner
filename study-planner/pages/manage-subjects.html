@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manage Subjects | Admin</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">📘 Study Planner Admin</div>
+    <nav>
+      <a href="admin-dashboard.html">Dashboard</a>
+      <a href="manage-users.html">Manage Users</a>
+      <a href="manage-subjects.html" class="active">Manage Subjects</a>
+      <a href="index.html">Logout</a>
+    </nav>
+  </header>
+
+  <section class="admin-section" style="background: url('images/clean-study-bg.jpg') center center/cover no-repeat;">
+    <div class="admin-box">
+      <h2>📚 Manage Subjects</h2>
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>Subject ID</th>
+            <th>Subject Name</th>
+            <th>Assigned Teacher</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>SJ101</td>
+            <td>Mathematics</td>
+            <td>Mr. Khan</td>
+            <td>
+              <button>Edit</button>
+              <button>Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>SJ102</td>
+            <td>English</td>
+            <td>Mrs. Sharma</td>
+            <td>
+              <button>Edit</button>
+              <button>Delete</button>
+            </td>
+          </tr>
+          <!-- More subject rows can go here -->
+        </tbody>
+      </table>
+
+      <button class="primary-btn" style="margin-top: 1.5rem;">➕ Add New Subject</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Study Planner Admin Panel</p>
+  </footer>
+</body>
+</html>

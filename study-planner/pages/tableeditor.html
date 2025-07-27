@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Timetable Editor | Study Planner</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">📘 Study Planner</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="subjects.html">Subjects</a>
+      <a href="login.html">Logout</a>
+    </nav>
+  </header>
+
+  <section class="editor-section">
+    <div class="editor-box">
+      <h2>📅 Edit Your Timetable</h2>
+      <form>
+        <label>Day:</label>
+        <select required>
+          <option value="">Select a day</option>
+          <option>Monday</option>
+          <option>Tuesday</option>
+          <option>Wednesday</option>
+          <option>Thursday</option>
+          <option>Friday</option>
+          <option>Saturday</option>
+          <option>Sunday</option>
+        </select>
+
+        <label>Subject:</label>
+        <input type="text" placeholder="e.g. Mathematics" required />
+
+        <label>Time:</label>
+        <input type="time" required />
+
+        <button type="submit">Save Session</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Study Planner. All rights reserved.</p>
+  </footer>
+</body>
+</html>

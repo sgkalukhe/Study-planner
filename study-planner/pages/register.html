@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register | Study Planner</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">📘 Study Planner</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <section class="auth-section">
+    <div class="auth-box">
+      <h2>Create Account</h2>
+      <p>Join the Study Planner community today.</p>
+      <form action="/study-planner/register.php" method="POST">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="password" name="password" placeholder="Password" required />
+        <input type="password" name="confirm_password" placeholder="Confirm Password" required />
+        <button type="submit">Register</button>
+        <p class="switch-auth">Already have an account? <a href="login.html">Login here</a></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Study Planner. All rights reserved.</p>
+  </footer>
+</body>
+</html>
